@@ -3,33 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Manga Collection</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; background: #f4f4f4; margin: 0; padding: 0; }
-    .manga { margin: 20px auto; width: 250px; border: 2px solid #333; background: white; border-radius: 8px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-    .manga img { width: 100%; cursor: pointer; border-radius: 5px; }
-    .manga h2 { margin: 10px 0; }
-    a { text-decoration: none; color: black; }
-  </style>
+  <title>Manga Horizons Collection</title>
+  <meta name="description" content="Read manga online! Featuring Rogue Horizons and Eclipse Chronicle.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Manga Collection</h1>
-
-  <!-- Rogue Horizons -->
-  <div class="manga">
-    <a href="rogue-ch1.html">
-      <img src="roguehorizons.png" alt="Rogue Horizons Cover">
-      <h2>Rogue Horizons</h2>
-    </a>
-  </div>
-
-  <!-- Eclipse Chronicle -->
-  <div class="manga">
-    <a href="eclipse-ch1.html">
-      <img src="manga-cover.jpg" alt="Eclipse Chronicle Cover">
-      <h2>Eclipse Chronicle</h2>
-    </a>
-  </div>
-
+  <header>
+    <h1>Manga Horizons Collection</h1>
+    <button id="theme-toggle" class="theme-toggle">Toggle Light/Dark Mode</button>
+  </header>
+  <main>
+    <section class="manga-list">
+      <div class="manga-card">
+        <a href="rogue-ch1.html">
+          <img src="roguehorizons.png" alt="Rogue Horizons Series Cover" class="cover-img" loading="lazy">
+          <h2>Rogue Horizons</h2>
+        </a>
+      </div>
+      <div class="manga-card">
+        <a href="eclipse-ch1.html">
+          <img src="manga-cover.jpg" alt="Eclipse Chronicle Series Cover" class="cover-img" loading="lazy">
+          <h2>Eclipse Chronicle</h2>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Manga Horizons</p>
+  </footer>
+  <script src="theme.js"></script>
 </body>
 </html>
