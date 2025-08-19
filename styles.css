@@ -1,8 +1,11 @@
-body.homepage.day {
-  background: url('homepage-bg-day.png') no-repeat center center fixed;
+/* Default homepage light mode background */
+body.homepage {
+  background: url("homepage-bg-day.png.png") no-repeat center center fixed;
   background-size: cover;
 }
-body.homepage.night {
-  background: url('homepage-bg-night.png.png') no-repeat center center fixed;
+
+/* Homepage dark mode background */
+body.dark-mode.homepage {
+  background: url("homepage-bg-night.png.png") no-repeat center center fixed;
   background-size: cover;
 }
