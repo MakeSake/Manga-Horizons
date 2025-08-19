@@ -15,14 +15,16 @@ html,body{height:100%}
 body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   line-height:1.6;
-  color:var(--text-light);
+  /*color:var(--text-light);*/
+  background-color: white;
+ color: black;
 
   /* Home backgrounds — exact filenames you provided */
   background:url("homepage-bg-day.png.png") center/cover fixed no-repeat;
 }
-body.dark-mode{
+.dark-mode{
   background:url("homepage-bg-night.png.png") center/cover fixed no-repeat;
-  color:var(--text-light);
+ color:var(--text-light);
 }
 
 /* ===== Layout helpers ===== */
@@ -110,3 +112,4 @@ body:not(.dark-mode) .series-cta{background:var(--primary);color:#fff}
   .site-title{font-size:1.5rem}
   .header-inner{justify-content:center;text-align:center}
 }
+
