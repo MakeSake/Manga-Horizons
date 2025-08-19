@@ -2,15 +2,14 @@
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Set initial theme from localStorage or default to day
+// Determine initial theme from localStorage or default to day
 let theme = localStorage.getItem('theme') || 'day';
 
 function applyTheme() {
-  // Remove both theme classes
   body.classList.remove('day', 'night');
   body.classList.add(theme);
 
-  // Button text/icon
+  // Update button text/icon
   if (themeToggle) {
     themeToggle.textContent = theme === 'day' ? '🌙 Dark Mode' : '☀️ Light Mode';
   }
