@@ -17,16 +17,16 @@ body{
   line-height:1.6;
   color:var(--text-light);
   background-color: white;
- color: black;
+  color: black;
 
   /* Home backgrounds — exact filenames you provided */
   background:url("homepage-bg-day.png.png") center/cover fixed no-repeat;
 }
 .dark-mode{
-  background:url("homepage-bg-night.png.png") center/cover fixed no-repeat;
- background-color: black;
-  color: white;
-  color:var(--text-light);
+background:url("homepage-bg-night.png.png") center/cover fixed no-repeat;
+background-color: black;
+color: white;
+color:var(--text-light);
 }
 
 /* ===== Layout helpers ===== */
@@ -114,6 +114,7 @@ body:not(.dark-mode) .series-cta{background:var(--primary);color:#fff}
   .site-title{font-size:1.5rem}
   .header-inner{justify-content:center;text-align:center}
 }
+
 
 
 
