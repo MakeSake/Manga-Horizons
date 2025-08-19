@@ -1,66 +1,46 @@
 <!DOCTYPE html>
-
-
-<link rel="stylesheet" href="styles.css" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manga Horizons</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="homepage">
-<a class="skip-link" href="#content">Skip to content</a>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Manga Horizons</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
+  <!-- ===== BLUE LINKS INSIDE BOX ===== -->
+  <section class="series-links">
+    <a href="rogue/index.html">Rogue Horizons</a>
+    <a href="eclipse/index.html">Eclipse Chronicle</a>
+  </section>
 
-<header class="site-header">
-<div class="container header-inner">
-<h1 class="logo">Manga Horizons</h1>
-<nav aria-label="Main">
-<ul class="nav">
-<li><a href="rogue-ch1.html">Rogue Horizons</a></li>
-<li><a href="eclipse-ch1.html">Eclipse Chronicle</a></li>
-</ul>
-</nav>
-<button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">☀️ Light Mode</button>
-</div>
-</header>
+  <!-- ===== HOMEPAGE SERIES CARDS ===== -->
+  <section class="series-grid">
+    <div class="series-card">
+      <img src="images/rogue-cover.png" alt="Rogue Horizons">
+      <h3>Rogue Horizons</h3>
+      <a href="rogue/index.html">Start at Chapter 1 ⟶</a>
+    </div>
 
+    <div class="series-card">
+      <img src="images/eclipse-cover.png" alt="Eclipse Chronicle">
+      <h3>Eclipse Chronicle</h3>
+      <a href="eclipse/index.html">Start at Chapter 1 ⟶</a>
+    </div>
+  </section>
 
-<main id="content" class="container">
-<section class="hero">
-<h2>Two worlds. Endless pages.</h2>
-<p>Dive into our original manga series. Switch themes to match your vibe — day or night.</p>
-</section>
-
-
-<section class="series-grid" aria-label="Series list">
-<article class="manga-card">
-<a class="card-link" href="rogue-ch1.html">
-<img src="roguehorizons.png" alt="Rogue Horizons series cover" class="cover-img" loading="lazy" />
-<h3>Rogue Horizons</h3>
-<p>Start at Chapter 1 →</p>
-</a>
-</article>
-
-
-<article class="manga-card">
-<a class="card-link" href="eclipse-ch1.html">
-<img src="manga-cover.jpg" alt="Eclipse Chronicle series cover" class="cover-img" loading="lazy" />
-<h3>Eclipse Chronicle</h3>
-<p>Start at Chapter 1 →</p>
-</a>
-</article>
-</section>
-</main>
-
-
-<footer class="site-footer">
-<div class="container">
-<p>© 2025 Manga Horizons</p>
-</div>
-</footer>
-
-
-<noscript>
-<div class="noscript">JavaScript is disabled — theme toggle and some enhancements won’t work.</div>
-</noscript>
-
-
-<script src="theme.js"></script>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Manga Horizons. All rights reserved.</p>
+  </footer>
 </body>
 </html>
