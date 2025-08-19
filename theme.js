@@ -1,29 +1,29 @@
-function setTheme(mode) {
-  document.body.classList.toggle('dark-mode', mode === 'dark');
-  localStorage.setItem('theme', mode);
-  // Update button text/icon
-  const toggleBtn = document.getElementById('theme-toggle');
-  if (toggleBtn) {
-    toggleBtn.innerHTML = mode === 'dark' ? '🌙 Dark Mode' : '☀️ Light Mode';
+// Theme Switcher for homepage and manga/read pages
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Set initial theme from localStorage or default to day
+let theme = localStorage.getItem('theme') || 'day';
+
+function applyTheme() {
+  // Remove both theme classes
+  body.classList.remove('day', 'night');
+  body.classList.add(theme);
+
+  // Button text/icon
+  if (themeToggle) {
+    themeToggle.textContent = theme === 'day' ? '🌙 Dark Mode' : '☀️ Light Mode';
   }
 }
 
-function getCurrentTheme() {
-  return document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+// Toggle theme on button click
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    theme = theme === 'day' ? 'night' : 'day';
+    localStorage.setItem('theme', theme);
+    applyTheme();
+  });
 }
 
-function toggleTheme() {
-  const current = getCurrentTheme();
-  setTheme(current === 'dark' ? 'light' : 'dark');
-}
-
-// On page load, set theme based on localStorage
-document.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
-  setTheme(savedTheme === 'dark' ? 'dark' : 'light');
-  // Attach event to theme toggle button if present
-  const toggleBtn = document.getElementById('theme-toggle');
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', toggleTheme);
-  }
-});
+// On page load, apply theme from localStorage
+applyTheme();
